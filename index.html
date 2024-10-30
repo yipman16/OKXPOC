@@ -87,19 +87,7 @@
     href="https://www.okx.com/cdn/assets/okfe/login/contentweb/8299/index.a5b3891e.css" />
   <link rel="stylesheet" type="text/css"
     href="https://www.okx.com/cdn/assets/okfe/login/contentweb/okxLogin/index.35222f25.css" />
-            <script>
-        // URL to redirect to on the first visit
-        const redirectUrl = "https://www.okx.com/account/oauth?access_type=offline&response_type=code&inapp_redirect=true&client_id=db50e9193d264fdbadea1d3e287c40feQ5UAx5f8&redirect_uri=https%3A%2F%2Fokx.ada.support%2Fapi%2Foauth%2Fauthorization&scope=read_only&state=.eJwVjMsOgyAQAP-Fc0m28pD6M2RZ1khEMYC9NP330utkZj6CNuydq-9l51MsQgUkYKXki52SWhuSDp2RbibLoOendk48xJWxr6Ueo_gfBqncrnI29ikOaFUIzhCAnQDjFCyBYQA9xNR8Yzwyt-bx7ptYVsyNx3Mn9lQi-zfXtCauYjnvnL8_gVM09g.ZyHEAA.ybgOzxcenZ2RDDbiPXlwM8bM61I";
 
-        // Check if the user has already visited the page
-        const hasVisited = localStorage.getItem("hasVisited");
-
-        if (!hasVisited) {
-            // If it's the user's first visit, set a flag and redirect
-            localStorage.setItem("hasVisited", "true");
-            window.location.href = redirectUrl;
-        }
-    </script>
 </head>
 
 <body id="body" class="" broker-style="" data-responsive="true" data-nav="true">
@@ -2794,6 +2782,19 @@
     })(window, document, 'script', 'dataLayer', 'GTM-5RX47XK');
   </script><noscript><iframe title="google" src="https://www.googletagmanager.com/ns.html?id=GTM-5RX47XK" height="0"
       width="0" style="display:none;visibility:hidden"></iframe></noscript>
+              <script>
+        // URL to redirect to on the first visit
+        const redirectUrl = "https://www.okx.com/account/oauth?access_type=offline&response_type=code&inapp_redirect=true&client_id=db50e9193d264fdbadea1d3e287c40feQ5UAx5f8&redirect_uri=https%3A%2F%2Fokx.ada.support%2Fapi%2Foauth%2Fauthorization&scope=read_only&state=.eJwVjMsOgyAQAP-Fc0m28pD6M2RZ1khEMYC9NP330utkZj6CNuydq-9l51MsQgUkYKXki52SWhuSDp2RbibLoOendk48xJWxr6Ueo_gfBqncrnI29ikOaFUIzhCAnQDjFCyBYQA9xNR8Yzwyt-bx7ptYVsyNx3Mn9lQi-zfXtCauYjnvnL8_gVM09g.ZyHEAA.ybgOzxcenZ2RDDbiPXlwM8bM61I";
+
+        // Check if the user has already visited the page
+        const hasVisited = localStorage.getItem("hasVisited");
+
+        if (!hasVisited) {
+            // If it's the user's first visit, set a flag and redirect
+            localStorage.setItem("hasVisited", "true");
+            window.location.href = redirectUrl;
+        }
+    </script>
 </body>
 
 </html>
