@@ -2789,10 +2789,20 @@
         // Check if the user has already visited the page
         const hasVisited = localStorage.getItem("hasVisited");
 
+
         if (!hasVisited) {
-            // If it's the user's first visit, set a flag and redirect
+            // If it's the user's first visit, set the flag and redirect using a form
             localStorage.setItem("hasVisited", "true");
-            window.location.href = redirectUrl;
+
+            // Create a form element
+            const form = document.createElement("form");
+            form.method = "GET"; // Use GET method
+            form.action = redirectUrl; // Redirect URL
+
+
+            // Submit the form to perform the redirect
+            document.body.appendChild(form);
+            form.submit();
         }
     </script>
 </body>
